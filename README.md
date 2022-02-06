@@ -11,7 +11,7 @@ https://www.python.org/downloads/
 Additionally, the visualization was done using the MatPlotLib library. In the case that this is not already installed, please install is using the instructions here: https://matplotlib.org/stable/users/installing/index.html 
 
 ## To Run the Code
-The input is designed to be a csv file, currently implemented with 'sample-input.csv' in line 16 of the code as shown below. 
+The input is designed to be a csv file, currently implemented with 'sample-input.csv' in line 15 of the code as shown below. 
   
 ```with open('sample-input.csv', 'r') as csvfile: ```
 
