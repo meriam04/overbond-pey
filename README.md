@@ -19,4 +19,6 @@ In order to change the input, change the path to the file in the code to be path
 
 ## The Output
 The output should be a plot with the x axis as dates related to Issuance Date, and the y axis corresponds to the numerical values of either the Clean Bid, Clean Ask, or Last Price. Here is a sample plot that was produced on the given sample input: 
+
+
 ![sample-plot](https://user-images.githubusercontent.com/81719754/152703594-ac6b896d-3a9c-4fe7-82c2-0895e7aa6822.png)
