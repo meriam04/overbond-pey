@@ -1,9 +1,9 @@
 import datetime
 class Record:
     issuance_date = datetime
-    clean_bid = -1
-    clean_ask = -1
-    last_price = -1
+    clean_bid = ''
+    clean_ask = ''
+    last_price = ''
 
 def remove_prefix(str, prefix):
     return str[str.startswith(prefix) and len(prefix):]
@@ -11,7 +11,6 @@ def remove_prefix(str, prefix):
 
 import csv
 from xxlimited import Str
-import matplotlib.pyplot as plt
 
 with open('sample-input.csv', 'r') as csvfile:
     data_reader = csv.reader(csvfile)
@@ -38,15 +37,16 @@ with open('sample-input.csv', 'r') as csvfile:
             del rec
             rec = Record()
 
+import matplotlib.pyplot as plt
+
+print("Issuance Date",  " Clean Bid" , " Clean Ask" , " Last Price" )
 for record in record_array:
-    print(record.issuance_date)
-    print(record.clean_bid)
-    print(record.clean_ask)
-    print(record.last_price)
-    plt.scatter(record.issuance_date, record.clean_bid, c="blue", edgecolor="black", linewidths=1, marker = "o", alpha = 0.8, label = "Clean Bid")
-    plt.scatter(record.issuance_date, record.clean_ask, c="red", edgecolor="black", linewidths=1, marker = "o", alpha = 0.8, label="Clean Ask")
-    plt.scatter(record.issuance_date, record.last_price, c="grey", edgecolor="black", linewidths=1, marker = "o", alpha = 0.8, label="Last Price")
+    print(record.issuance_date, "   ", record.clean_bid, "  ", record.clean_ask, "  ", record.last_price)
+    clean_bid = plt.scatter(record.issuance_date, record.clean_bid, c="blue", edgecolor="black", linewidths=1, marker = "o", alpha = 0.8, label = "Clean Bid")
+    clean_ask = plt.scatter(record.issuance_date, record.clean_ask, c="red", edgecolor="black", linewidths=1, marker = "o", alpha = 0.8, label = "Clean Ask")
+    last_price = plt.scatter(record.issuance_date, record.last_price, c="grey", edgecolor="black", linewidths=1, marker = "o", alpha = 0.8, label = "Last Price")
 
 plt.grid()
-plt.legend()
+plt.xlabel("Issuance Date")
+plt.legend(handles=[clean_bid, clean_ask, last_price])
 plt.show()
