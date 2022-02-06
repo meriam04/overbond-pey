@@ -1,9 +1,6 @@
 # Overview
 This is my solution to the overbond-eng-test for PEY. The goal was to produce a scatter plot out of an unstructured data input. 
 
-### Disclaimer
-I did not have time for automated testing, but I would have liked to run tests against the sample file and ensured that the output values matched the expected ones.
-
 ## Before Running the Code
 This solution was implemented in Python, so Python should be installed in order to run it. In the case that Python is not installed, here is a link to install it:
 https://www.python.org/downloads/
@@ -22,3 +19,7 @@ The output should be a plot with the x axis as dates related to Issuance Date, a
 
 
 ![sample-plot](https://user-images.githubusercontent.com/81719754/152703594-ac6b896d-3a9c-4fe7-82c2-0895e7aa6822.png)
+
+
+### Disclaimer
+I did not have time for automated testing, but I would have liked to run tests against the sample file and ensured that the output values matched the expected ones.
